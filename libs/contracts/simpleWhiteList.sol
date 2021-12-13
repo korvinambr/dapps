@@ -10,4 +10,12 @@ pragma solidity >=0.8.0 <0.9.0;
             require(msg.sender == owner);
             whitelisted[_user] = true;
         }   
+
+        function getWhiteListed() public returns(address){
+            return whitelisted;
+        }
+
+        function getOwner() public returns(address){
+            return owner;
+        }
     }
